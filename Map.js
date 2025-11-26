@@ -47,3 +47,14 @@ map.forEach((key,value)=>{
     arr2.push({value,key});
 });
 console.log(arr2)
+
+
+// convert array of object to map using array map method
+
+let a=[
+    {'id':1,'value':100},
+    {'id':2,'value':200},
+    {'id':3,'value':300},
+    ];
+let map1=new Map(a.map((ele)=>[ele.id,ele.value]));
+console.log(map1);
