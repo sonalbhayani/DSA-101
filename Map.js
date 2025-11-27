@@ -32,10 +32,14 @@ else
 console.log("not Empty");
 
 map.set(1,'abc');
-map.set(2,'xyz');
-map.set(3,'pqr');
+map.set(3,'xyz');
+map.set(2,'pqr');
 // convert map to array using [...spreat operator]
-console.log(map);
+// console.log(map);
+
+// // sort the map using map.entries method
+
+
 let arr=[...map];
 console.log(arr)
 // convert map to array usinf Array.from() method
@@ -47,6 +51,11 @@ map.forEach((key,value)=>{
     arr2.push({value,key});
 });
 console.log(arr2)
+let map3=new Map([...map].sort());
+console.log(map3);
+
+let map4=new Map(Array.from(map).sort((a,b)=>a[1]-b[1]));
+console.log(map4);
 
 
 // convert array of object to map using array map method
