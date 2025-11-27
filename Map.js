@@ -58,3 +58,24 @@ let a=[
     ];
 let map1=new Map(a.map((ele)=>[ele.id,ele.value]));
 console.log(map1);
+
+// convert array of object to map using array reduce method
+
+let m=a.reduce((acc,o)=>{
+    acc.set(o.id,o.value);
+    return acc;
+},new Map());
+console.log(m);
+
+// convert array of object to map using array forEach method
+
+let m1=new Map();
+a.forEach((ele)=>m1.set(ele.id,ele.value));
+console.log(m1);
+
+// convert array of object to map using  for of loop
+let m2=new Map();
+for(let o of a){
+    m2.set(o.id,o.value);
+}
+console.log(m2);
