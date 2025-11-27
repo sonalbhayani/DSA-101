@@ -79,3 +79,8 @@ for(let o of a){
     m2.set(o.id,o.value);
 }
 console.log(m2);
+
+
+// convert array of object to map using map method
+let m3=new Map(a.map(({id,value})=>[id,value]));
+console.log(m3);
